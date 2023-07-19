@@ -1,0 +1,8 @@
+<h1> Merchant's Index Page </h1>
+
+<ol>
+<h3> Names </h3>
+<% @merchants.each do |merchant_hash| %>
+<li><%= merchant_hash[:attributes][:name] %></li>
+<% end  %>
+</ol>
