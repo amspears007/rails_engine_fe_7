@@ -2,6 +2,6 @@
 <ol>
 <h3> Merchant Names </h3>
 <% @merchants.each do |merchant_hash| %>
-<li><%= merchant_hash[:attributes][:name] %></li>
+<li><%= link_to "#{merchant_hash[:attributes][:name]}", "" %></li>
 <% end %>
 <ol>
