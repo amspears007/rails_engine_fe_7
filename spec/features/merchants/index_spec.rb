@@ -5,10 +5,13 @@ RSpec.describe "Merchants Index API Page" do
   describe "I visit '/merchants" do
    it "I should see a list of merchant names with a link to their show page" do
     visit merchants_path
-save_and_open_page
-    expect(page).to have_content("Schroeder-Jerde")
-    expect(page).to have_content("Klein, Rempel and Jones")
-    expect(page).to have_content( "Wisozk, Hoeger and Bosco")
+# save_and_open_page
+    expect(page).to have_link("Schroeder-Jerde")
+    expect(page).to have_link("Klein, Rempel and Jones")
+    expect(page).to have_link( "Wisozk, Hoeger and Bosco")
+
+    click_link"Schroeder-Jerde"
+    expect(current_path).to eq(merchant_path(1))
    end
   end
 end

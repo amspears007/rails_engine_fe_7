@@ -2,7 +2,7 @@
 
 <ol>
 <h3> Names </h3>
-<% @merchants.each do |merchant_hash| %>
-<li><%= merchant_hash[:attributes][:name] %></li>
+<% @merchants.each do |merchant| %>
+<li><%= link_to "#{merchant[:attributes][:name]}", merchant_path(merchant) %></li>
 <% end  %>
 </ol>
