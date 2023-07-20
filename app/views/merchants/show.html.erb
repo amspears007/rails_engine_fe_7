@@ -1,1 +1,9 @@
 
+<h1> <%= @merchant[:attributes][:name] %> Show Page </h1>
+
+<ol>
+<h3> Items Sold </h3>
+<% @items.each do |item| %>
+<li><%= item[:attributes][:name] %></li>
+<% end %>
+</ol>
