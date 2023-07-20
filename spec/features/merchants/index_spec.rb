@@ -1,6 +1,5 @@
 require "rails_helper"
 
-
 RSpec.describe "Merchants Index API Page" do
   describe "I visit '/merchants" do
    it "I should see a list of merchant names with a link to their show page" do
